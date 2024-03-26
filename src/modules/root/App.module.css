@@ -1,0 +1,78 @@
+.screen {
+  height: 100dvh;
+  height: 100vh;
+  min-width: 250px;
+  padding: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.board {
+  min-height: 300px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  position: relative;
+}
+
+.square {
+  width: 70px;
+  height: 70px;
+  font-weight: 700;
+  background-color: #6694de;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.first {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: 2.5s ease-in-out 1s infinite alternate bounce;
+}
+
+.circle {
+  display: none;
+  background-color: #d9ff00;
+  border-radius: 50%;
+  min-width: 35px;
+  height: 35px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition-property: left top;
+  transition-duration: 2s;
+}
+
+.btn {
+  height: 50px;
+  width: 200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  border-radius: 25px;
+  border: 0;
+  font-weight: 700;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  cursor: default;
+  background-color: #808080;
+}
+
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: calc(100% - 70px);
+  }
+}
